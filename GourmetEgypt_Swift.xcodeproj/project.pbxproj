@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		120B1ED01EAF4ECE00019974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120B1ECE1EAF4ECE00019974 /* Main.storyboard */; };
+		120B1ED51EAF4ECE00019974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120B1ED41EAF4ECE00019974 /* Assets.xcassets */; };
+		120B1ED81EAF4ECE00019974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120B1ED61EAF4ECE00019974 /* LaunchScreen.storyboard */; };
+		120B1EE31EAF4ECE00019974 /* GourmetEgypt_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B1EE21EAF4ECE00019974 /* GourmetEgypt_SwiftTests.swift */; };
+		120B1EFE1EAF657B00019974 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EF41EAF657B00019974 /* 1.png */; };
+		120B1EFF1EAF657B00019974 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EF51EAF657B00019974 /* 2.png */; };
+		120B1F001EAF657B00019974 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EF61EAF657B00019974 /* 3.png */; };
+		120B1F011EAF657B00019974 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EF71EAF657B00019974 /* 4.png */; };
+		120B1F021EAF657B00019974 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EF81EAF657B00019974 /* 8.png */; };
+		120B1F031EAF657B00019974 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EF91EAF657B00019974 /* 9.png */; };
+		120B1F041EAF657B00019974 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EFA1EAF657B00019974 /* 10.png */; };
+		120B1F051EAF657B00019974 /* home_filled_dark_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EFB1EAF657B00019974 /* home_filled_dark_purple.png */; };
+		120B1F061EAF657B00019974 /* request_dark_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EFC1EAF657B00019974 /* request_dark_purple.png */; };
+		120B1F071EAF657B00019974 /* timeline_filled_dark_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 120B1EFD1EAF657B00019974 /* timeline_filled_dark_purple.png */; };
+		120B1F0A1EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 120B1F081EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld */; };
+		120B1F0E1EAF65B100019974 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B1F0D1EAF65B100019974 /* HomeViewController.swift */; };
+		120B1F101EAF75BA00019974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B1F0F1EAF75BA00019974 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		120B1EDF1EAF4ECE00019974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 120B1EBF1EAF4ECD00019974 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 120B1EC61EAF4ECE00019974;
+			remoteInfo = GourmetEgypt_Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		120B1EC71EAF4ECE00019974 /* GourmetEgypt_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GourmetEgypt_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		120B1ECF1EAF4ECE00019974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		120B1ED41EAF4ECE00019974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		120B1ED71EAF4ECE00019974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		120B1ED91EAF4ECE00019974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120B1EDE1EAF4ECE00019974 /* GourmetEgypt_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GourmetEgypt_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		120B1EE21EAF4ECE00019974 /* GourmetEgypt_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetEgypt_SwiftTests.swift; sourceTree = "<group>"; };
+		120B1EE41EAF4ECE00019974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120B1EF41EAF657B00019974 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Resources/1.png; sourceTree = "<group>"; };
+		120B1EF51EAF657B00019974 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = Resources/2.png; sourceTree = "<group>"; };
+		120B1EF61EAF657B00019974 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = Resources/3.png; sourceTree = "<group>"; };
+		120B1EF71EAF657B00019974 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = Resources/4.png; sourceTree = "<group>"; };
+		120B1EF81EAF657B00019974 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8.png; path = Resources/8.png; sourceTree = "<group>"; };
+		120B1EF91EAF657B00019974 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 9.png; path = Resources/9.png; sourceTree = "<group>"; };
+		120B1EFA1EAF657B00019974 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10.png; path = Resources/10.png; sourceTree = "<group>"; };
+		120B1EFB1EAF657B00019974 /* home_filled_dark_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_filled_dark_purple.png; path = Resources/home_filled_dark_purple.png; sourceTree = "<group>"; };
+		120B1EFC1EAF657B00019974 /* request_dark_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = request_dark_purple.png; path = Resources/request_dark_purple.png; sourceTree = "<group>"; };
+		120B1EFD1EAF657B00019974 /* timeline_filled_dark_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timeline_filled_dark_purple.png; path = Resources/timeline_filled_dark_purple.png; sourceTree = "<group>"; };
+		120B1F091EAF659800019974 /* GourmetEgypt_Swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GourmetEgypt_Swift.xcdatamodel; sourceTree = "<group>"; };
+		120B1F0D1EAF65B100019974 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "View Controllers/HomeViewController.swift"; sourceTree = "<group>"; };
+		120B1F0F1EAF75BA00019974 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "AppDelegate Files/AppDelegate.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		120B1EC41EAF4ECE00019974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120B1EDB1EAF4ECE00019974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		120B1EBE1EAF4ECD00019974 = {
+			isa = PBXGroup;
+			children = (
+				120B1EC91EAF4ECE00019974 /* GourmetEgypt_Swift */,
+				120B1EE11EAF4ECE00019974 /* GourmetEgypt_SwiftTests */,
+				120B1EC81EAF4ECE00019974 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		120B1EC81EAF4ECE00019974 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				120B1EC71EAF4ECE00019974 /* GourmetEgypt_Swift.app */,
+				120B1EDE1EAF4ECE00019974 /* GourmetEgypt_SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		120B1EC91EAF4ECE00019974 /* GourmetEgypt_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				120B1EF11EAF52DB00019974 /* Resources */,
+				120B1EF21EAF52E600019974 /* Third Party */,
+				120B1EF01EAF50B800019974 /* Model */,
+				120B1EED1EAF4FF200019974 /* Delegate Files */,
+				120B1EEE1EAF502100019974 /* View Controllers */,
+				120B1EEF1EAF503C00019974 /* View */,
+				120B1ED41EAF4ECE00019974 /* Assets.xcassets */,
+				120B1ED91EAF4ECE00019974 /* Info.plist */,
+			);
+			path = GourmetEgypt_Swift;
+			sourceTree = "<group>";
+		};
+		120B1EE11EAF4ECE00019974 /* GourmetEgypt_SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				120B1EE21EAF4ECE00019974 /* GourmetEgypt_SwiftTests.swift */,
+				120B1EE41EAF4ECE00019974 /* Info.plist */,
+			);
+			path = GourmetEgypt_SwiftTests;
+			sourceTree = "<group>";
+		};
+		120B1EED1EAF4FF200019974 /* Delegate Files */ = {
+			isa = PBXGroup;
+			children = (
+				120B1F0F1EAF75BA00019974 /* AppDelegate.swift */,
+			);
+			name = "Delegate Files";
+			sourceTree = "<group>";
+		};
+		120B1EEE1EAF502100019974 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				120B1F251EAF7DA900019974 /* Home ViewController */,
+				120B1F261EAF7DE500019974 /* Offers ViewController */,
+				120B1F271EAF7E3800019974 /* Recipes ViewController */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		120B1EEF1EAF503C00019974 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				120B1EF31EAF540A00019974 /* Custom View */,
+				120B1ECE1EAF4ECE00019974 /* Main.storyboard */,
+				120B1ED61EAF4ECE00019974 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		120B1EF01EAF50B800019974 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				120B1F081EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		120B1EF11EAF52DB00019974 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				120B1EF41EAF657B00019974 /* 1.png */,
+				120B1EF51EAF657B00019974 /* 2.png */,
+				120B1EF61EAF657B00019974 /* 3.png */,
+				120B1EF71EAF657B00019974 /* 4.png */,
+				120B1EF81EAF657B00019974 /* 8.png */,
+				120B1EF91EAF657B00019974 /* 9.png */,
+				120B1EFA1EAF657B00019974 /* 10.png */,
+				120B1EFB1EAF657B00019974 /* home_filled_dark_purple.png */,
+				120B1EFC1EAF657B00019974 /* request_dark_purple.png */,
+				120B1EFD1EAF657B00019974 /* timeline_filled_dark_purple.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		120B1EF21EAF52E600019974 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		120B1EF31EAF540A00019974 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Custom View";
+			sourceTree = "<group>";
+		};
+		120B1F251EAF7DA900019974 /* Home ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				120B1F0D1EAF65B100019974 /* HomeViewController.swift */,
+			);
+			name = "Home ViewController";
+			sourceTree = "<group>";
+		};
+		120B1F261EAF7DE500019974 /* Offers ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Offers ViewController";
+			sourceTree = "<group>";
+		};
+		120B1F271EAF7E3800019974 /* Recipes ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recipes ViewController";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		120B1EC61EAF4ECE00019974 /* GourmetEgypt_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120B1EE71EAF4ECE00019974 /* Build configuration list for PBXNativeTarget "GourmetEgypt_Swift" */;
+			buildPhases = (
+				120B1EC31EAF4ECE00019974 /* Sources */,
+				120B1EC41EAF4ECE00019974 /* Frameworks */,
+				120B1EC51EAF4ECE00019974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GourmetEgypt_Swift;
+			productName = GourmetEgypt_Swift;
+			productReference = 120B1EC71EAF4ECE00019974 /* GourmetEgypt_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		120B1EDD1EAF4ECE00019974 /* GourmetEgypt_SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120B1EEA1EAF4ECE00019974 /* Build configuration list for PBXNativeTarget "GourmetEgypt_SwiftTests" */;
+			buildPhases = (
+				120B1EDA1EAF4ECE00019974 /* Sources */,
+				120B1EDB1EAF4ECE00019974 /* Frameworks */,
+				120B1EDC1EAF4ECE00019974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				120B1EE01EAF4ECE00019974 /* PBXTargetDependency */,
+			);
+			name = GourmetEgypt_SwiftTests;
+			productName = GourmetEgypt_SwiftTests;
+			productReference = 120B1EDE1EAF4ECE00019974 /* GourmetEgypt_SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		120B1EBF1EAF4ECD00019974 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Ashutosh Mishra";
+				TargetAttributes = {
+					120B1EC61EAF4ECE00019974 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 42X27694DW;
+						ProvisioningStyle = Automatic;
+					};
+					120B1EDD1EAF4ECE00019974 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 42X27694DW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 120B1EC61EAF4ECE00019974;
+					};
+				};
+			};
+			buildConfigurationList = 120B1EC21EAF4ECD00019974 /* Build configuration list for PBXProject "GourmetEgypt_Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 120B1EBE1EAF4ECD00019974;
+			productRefGroup = 120B1EC81EAF4ECE00019974 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				120B1EC61EAF4ECE00019974 /* GourmetEgypt_Swift */,
+				120B1EDD1EAF4ECE00019974 /* GourmetEgypt_SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		120B1EC51EAF4ECE00019974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120B1F041EAF657B00019974 /* 10.png in Resources */,
+				120B1F021EAF657B00019974 /* 8.png in Resources */,
+				120B1ED81EAF4ECE00019974 /* LaunchScreen.storyboard in Resources */,
+				120B1F061EAF657B00019974 /* request_dark_purple.png in Resources */,
+				120B1F011EAF657B00019974 /* 4.png in Resources */,
+				120B1F031EAF657B00019974 /* 9.png in Resources */,
+				120B1F051EAF657B00019974 /* home_filled_dark_purple.png in Resources */,
+				120B1EFE1EAF657B00019974 /* 1.png in Resources */,
+				120B1F071EAF657B00019974 /* timeline_filled_dark_purple.png in Resources */,
+				120B1EFF1EAF657B00019974 /* 2.png in Resources */,
+				120B1F001EAF657B00019974 /* 3.png in Resources */,
+				120B1ED51EAF4ECE00019974 /* Assets.xcassets in Resources */,
+				120B1ED01EAF4ECE00019974 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120B1EDC1EAF4ECE00019974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		120B1EC31EAF4ECE00019974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120B1F101EAF75BA00019974 /* AppDelegate.swift in Sources */,
+				120B1F0E1EAF65B100019974 /* HomeViewController.swift in Sources */,
+				120B1F0A1EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120B1EDA1EAF4ECE00019974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120B1EE31EAF4ECE00019974 /* GourmetEgypt_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		120B1EE01EAF4ECE00019974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 120B1EC61EAF4ECE00019974 /* GourmetEgypt_Swift */;
+			targetProxy = 120B1EDF1EAF4ECE00019974 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		120B1ECE1EAF4ECE00019974 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				120B1ECF1EAF4ECE00019974 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		120B1ED61EAF4ECE00019974 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				120B1ED71EAF4ECE00019974 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		120B1EE51EAF4ECE00019974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		120B1EE61EAF4ECE00019974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		120B1EE81EAF4ECE00019974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42X27694DW;
+				INFOPLIST_FILE = GourmetEgypt_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bravvura.com.GourmetEgypt-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		120B1EE91EAF4ECE00019974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42X27694DW;
+				INFOPLIST_FILE = GourmetEgypt_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bravvura.com.GourmetEgypt-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		120B1EEB1EAF4ECE00019974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 42X27694DW;
+				INFOPLIST_FILE = GourmetEgypt_SwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bravvura.com.GourmetEgypt-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GourmetEgypt_Swift.app/GourmetEgypt_Swift";
+			};
+			name = Debug;
+		};
+		120B1EEC1EAF4ECE00019974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 42X27694DW;
+				INFOPLIST_FILE = GourmetEgypt_SwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bravvura.com.GourmetEgypt-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GourmetEgypt_Swift.app/GourmetEgypt_Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		120B1EC21EAF4ECD00019974 /* Build configuration list for PBXProject "GourmetEgypt_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120B1EE51EAF4ECE00019974 /* Debug */,
+				120B1EE61EAF4ECE00019974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		120B1EE71EAF4ECE00019974 /* Build configuration list for PBXNativeTarget "GourmetEgypt_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120B1EE81EAF4ECE00019974 /* Debug */,
+				120B1EE91EAF4ECE00019974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		120B1EEA1EAF4ECE00019974 /* Build configuration list for PBXNativeTarget "GourmetEgypt_SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120B1EEB1EAF4ECE00019974 /* Debug */,
+				120B1EEC1EAF4ECE00019974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		120B1F081EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				120B1F091EAF659800019974 /* GourmetEgypt_Swift.xcdatamodel */,
+			);
+			currentVersion = 120B1F091EAF659800019974 /* GourmetEgypt_Swift.xcdatamodel */;
+			name = GourmetEgypt_Swift.xcdatamodeld;
+			path = Models/GourmetEgypt_Swift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 120B1EBF1EAF4ECD00019974 /* Project object */;
+}
