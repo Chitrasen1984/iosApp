@@ -24,6 +24,14 @@
 		120B1F0A1EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 120B1F081EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld */; };
 		120B1F0E1EAF65B100019974 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B1F0D1EAF65B100019974 /* HomeViewController.swift */; };
 		120B1F101EAF75BA00019974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B1F0F1EAF75BA00019974 /* AppDelegate.swift */; };
+		124D84E01EB1BF2500C86745 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D84DF1EB1BF2500C86745 /* HomeTableViewCell.swift */; };
+		124D84E21EB2265E00C86745 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D84E11EB2265E00C86745 /* AccountViewController.swift */; };
+		127D9F231EB0B26F00862CB7 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F221EB0B26F00862CB7 /* CategoryViewController.swift */; };
+		127D9F251EB0BA9600862CB7 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F241EB0BA9600862CB7 /* ContainerViewController.swift */; };
+		127D9F271EB0BBDA00862CB7 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F261EB0BBDA00862CB7 /* SidePanelViewController.swift */; };
+		127D9F2C1EB0BC7F00862CB7 /* NodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F291EB0BC7F00862CB7 /* NodeTableViewCell.swift */; };
+		127D9F2D1EB0BC7F00862CB7 /* NodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 127D9F2A1EB0BC7F00862CB7 /* NodeTableViewCell.xib */; };
+		127D9F2E1EB0BC7F00862CB7 /* SHTreeViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F2B1EB0BC7F00862CB7 /* SHTreeViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +66,14 @@
 		120B1F091EAF659800019974 /* GourmetEgypt_Swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GourmetEgypt_Swift.xcdatamodel; sourceTree = "<group>"; };
 		120B1F0D1EAF65B100019974 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "View Controllers/HomeViewController.swift"; sourceTree = "<group>"; };
 		120B1F0F1EAF75BA00019974 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "AppDelegate Files/AppDelegate.swift"; sourceTree = "<group>"; };
+		124D84DF1EB1BF2500C86745 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		124D84E11EB2265E00C86745 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = "View Controllers/AccountViewController.swift"; sourceTree = "<group>"; };
+		127D9F221EB0B26F00862CB7 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = "View Controllers/CategoryViewController.swift"; sourceTree = "<group>"; };
+		127D9F241EB0BA9600862CB7 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = "View Controllers/ContainerViewController.swift"; sourceTree = "<group>"; };
+		127D9F261EB0BBDA00862CB7 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SidePanelViewController.swift; path = "View Controllers/SidePanelViewController.swift"; sourceTree = "<group>"; };
+		127D9F291EB0BC7F00862CB7 /* NodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeTableViewCell.swift; path = "Third Party/Source/NodeTableViewCell.swift"; sourceTree = "<group>"; };
+		127D9F2A1EB0BC7F00862CB7 /* NodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NodeTableViewCell.xib; path = "Third Party/Source/NodeTableViewCell.xib"; sourceTree = "<group>"; };
+		127D9F2B1EB0BC7F00862CB7 /* SHTreeViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SHTreeViewManager.swift; path = "Third Party/Source/SHTreeViewManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +150,8 @@
 				120B1F251EAF7DA900019974 /* Home ViewController */,
 				120B1F261EAF7DE500019974 /* Offers ViewController */,
 				120B1F271EAF7E3800019974 /* Recipes ViewController */,
+				127D9F201EB0983300862CB7 /* Account ViewController */,
+				127D9F211EB0987900862CB7 /* More ViewController */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -176,6 +194,7 @@
 		120B1EF21EAF52E600019974 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				127D9F281EB0BC6200862CB7 /* Tree */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -183,6 +202,7 @@
 		120B1EF31EAF540A00019974 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				124D84DF1EB1BF2500C86745 /* HomeTableViewCell.swift */,
 			);
 			name = "Custom View";
 			sourceTree = "<group>";
@@ -191,6 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				120B1F0D1EAF65B100019974 /* HomeViewController.swift */,
+				127D9F221EB0B26F00862CB7 /* CategoryViewController.swift */,
+				127D9F241EB0BA9600862CB7 /* ContainerViewController.swift */,
+				127D9F261EB0BBDA00862CB7 /* SidePanelViewController.swift */,
 			);
 			name = "Home ViewController";
 			sourceTree = "<group>";
@@ -207,6 +230,31 @@
 			children = (
 			);
 			name = "Recipes ViewController";
+			sourceTree = "<group>";
+		};
+		127D9F201EB0983300862CB7 /* Account ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				124D84E11EB2265E00C86745 /* AccountViewController.swift */,
+			);
+			name = "Account ViewController";
+			sourceTree = "<group>";
+		};
+		127D9F211EB0987900862CB7 /* More ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "More ViewController";
+			sourceTree = "<group>";
+		};
+		127D9F281EB0BC6200862CB7 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				127D9F291EB0BC7F00862CB7 /* NodeTableViewCell.swift */,
+				127D9F2A1EB0BC7F00862CB7 /* NodeTableViewCell.xib */,
+				127D9F2B1EB0BC7F00862CB7 /* SHTreeViewManager.swift */,
+			);
+			name = Tree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +349,7 @@
 				120B1F011EAF657B00019974 /* 4.png in Resources */,
 				120B1F031EAF657B00019974 /* 9.png in Resources */,
 				120B1F051EAF657B00019974 /* home_filled_dark_purple.png in Resources */,
+				127D9F2D1EB0BC7F00862CB7 /* NodeTableViewCell.xib in Resources */,
 				120B1EFE1EAF657B00019974 /* 1.png in Resources */,
 				120B1F071EAF657B00019974 /* timeline_filled_dark_purple.png in Resources */,
 				120B1EFF1EAF657B00019974 /* 2.png in Resources */,
@@ -324,8 +373,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127D9F271EB0BBDA00862CB7 /* SidePanelViewController.swift in Sources */,
+				127D9F231EB0B26F00862CB7 /* CategoryViewController.swift in Sources */,
 				120B1F101EAF75BA00019974 /* AppDelegate.swift in Sources */,
+				127D9F2E1EB0BC7F00862CB7 /* SHTreeViewManager.swift in Sources */,
+				127D9F251EB0BA9600862CB7 /* ContainerViewController.swift in Sources */,
 				120B1F0E1EAF65B100019974 /* HomeViewController.swift in Sources */,
+				124D84E21EB2265E00C86745 /* AccountViewController.swift in Sources */,
+				124D84E01EB1BF2500C86745 /* HomeTableViewCell.swift in Sources */,
+				127D9F2C1EB0BC7F00862CB7 /* NodeTableViewCell.swift in Sources */,
 				120B1F0A1EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +594,7 @@
 				120B1EE91EAF4ECE00019974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		120B1EEA1EAF4ECE00019974 /* Build configuration list for PBXNativeTarget "GourmetEgypt_SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +603,7 @@
 				120B1EEC1EAF4ECE00019974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

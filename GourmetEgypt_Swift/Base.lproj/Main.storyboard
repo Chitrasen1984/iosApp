@@ -14,7 +14,7 @@
         <!--Home-->
         <scene sceneID="a9b-FG-U72">
             <objects>
-                <viewController id="lxC-lF-5bT" customClass="ContainerViewController" sceneMemberID="viewController">
+                <viewController id="lxC-lF-5bT" customClass="ContainerViewController" customModule="GourmetEgypt_Swift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gd6-DL-r2v"/>
                         <viewControllerLayoutGuide type="bottom" id="ctv-E5-eEp"/>
@@ -34,7 +34,7 @@
         <!--Menu-->
         <scene sceneID="ewG-mI-2cV">
             <objects>
-                <viewController storyboardIdentifier="SidePanelViewController" title="Menu" id="9Ju-st-wgI" customClass="SidePanelViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SidePanelViewController" title="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Ju-st-wgI" customClass="SidePanelViewController" customModule="GourmetEgypt_Swift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QyP-SL-VR0"/>
                         <viewControllerLayoutGuide type="bottom" id="K6S-mZ-BBc"/>
@@ -44,18 +44,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eM3-K4-ZLn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="315" height="647"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="JZP-R7-Wch" style="IBUITableViewCellStyleDefault" id="soF-ly-JTH">
-                                        <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="315" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="soF-ly-JTH" id="dTY-x1-uwe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JZP-R7-Wch">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="285" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -67,34 +68,29 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="9Ju-st-wgI" id="zKr-74-kCg"/>
-                                    <outlet property="delegate" destination="9Ju-st-wgI" id="0Bm-iB-caB"/>
-                                </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.73886373819999995" green="0.95279865470000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="eM3-K4-ZLn" secondAttribute="trailing" id="6BM-Bn-l8u"/>
+                            <constraint firstAttribute="trailing" secondItem="eM3-K4-ZLn" secondAttribute="trailing" constant="60" id="6BM-Bn-l8u"/>
                             <constraint firstItem="eM3-K4-ZLn" firstAttribute="leading" secondItem="Swr-Pn-E0A" secondAttribute="leading" id="MIf-O6-pj6"/>
                             <constraint firstItem="K6S-mZ-BBc" firstAttribute="top" secondItem="eM3-K4-ZLn" secondAttribute="bottom" id="Xfg-TU-bRR"/>
-                            <constraint firstItem="eM3-K4-ZLn" firstAttribute="top" secondItem="Swr-Pn-E0A" secondAttribute="top" id="eG2-CF-NC2"/>
+                            <constraint firstItem="eM3-K4-ZLn" firstAttribute="top" secondItem="Swr-Pn-E0A" secondAttribute="topMargin" constant="20" id="eG2-CF-NC2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Master" id="HRT-rU-Kth"/>
                     <connections>
-                        <outlet property="menuTableView" destination="eM3-K4-ZLn" id="CpI-eg-x43"/>
-                        <segue destination="plc-Md-oNb" kind="show" identifier="showDetail" action="showDetailViewController:sender:" id="Jy5-6F-1uA"/>
+                        <outlet property="tableView" destination="eM3-K4-ZLn" id="fM3-xH-t5r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAc-cP-imV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.200000000000003" y="1375.8620689655174"/>
+            <point key="canvasLocation" x="-1010" y="1397"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GourmetEgypt_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -104,18 +100,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search Gourmet Egypt   " translatesAutoresizingMaskIntoConstraints="NO" id="4P0-A6-sVb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GwN-xJ-Hbb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1UU-gu-sL0"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZXy-QU-WW5">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="170" id="ttV-OU-u4K" customClass="HomeTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="170" id="ttV-OU-u4K" customClass="HomeTableViewCell" customModule="GourmetEgypt_Swift">
                                         <rect key="frame" x="0.0" y="10" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ttV-OU-u4K" id="rmR-D8-zxW">
@@ -149,7 +145,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <state key="normal" title="SHOP NOW"/>
                                                             <connections>
-                                                                <action selector="shopNowButtonTapped:" destination="ttV-OU-u4K" eventType="touchUpInside" id="E0w-EY-sqY"/>
+                                                                <action selector="shopNowButtonTapped:" destination="ttV-OU-u4K" eventType="touchUpInside" id="Eza-cl-10c"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -202,18 +198,18 @@
                                             <constraint firstItem="HRX-t5-QRb" firstAttribute="height" secondItem="ttV-OU-u4K" secondAttribute="height" multiplier="1:1.7" id="7pw-iv-jyf"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="banner2TextLabel" destination="CsW-pr-ynS" id="e5Z-FV-wZL"/>
-                                            <outlet property="bannerType1" destination="fL0-8i-fai" id="AIQ-Oc-CZ8"/>
-                                            <outlet property="bannerType2" destination="HRX-t5-QRb" id="FmU-D8-RLH"/>
-                                            <outlet property="cellImage" destination="8TM-cT-YUH" id="Ybf-if-QB6"/>
-                                            <outlet property="descriptionLabel" destination="gI6-Fz-pYN" id="j0k-Ea-hUV"/>
-                                            <outlet property="headingLabel" destination="O6h-tG-7ix" id="18n-QO-qiK"/>
+                                            <outlet property="banner2TextLabel" destination="CsW-pr-ynS" id="ZkG-fO-uKS"/>
+                                            <outlet property="bannerType1" destination="fL0-8i-fai" id="21c-SG-ZcZ"/>
+                                            <outlet property="bannerType2" destination="HRX-t5-QRb" id="GhH-Y3-2nj"/>
+                                            <outlet property="cellImage" destination="8TM-cT-YUH" id="qjC-KB-iHo"/>
+                                            <outlet property="descriptionLabel" destination="gI6-Fz-pYN" id="LvB-Hb-47D"/>
+                                            <outlet property="headingLabel" destination="O6h-tG-7ix" id="Wjk-CX-aID"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gnx-uq-Txk"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1NE-2t-8xv"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Fzv-1c-Jwk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UV7-tx-qQ0"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -232,24 +228,24 @@
                         <barButtonItem key="leftBarButtonItem" image="Hamburger" id="Tu2-ml-cH4">
                             <inset key="imageInsets" minX="1" minY="15" maxX="24" maxY="13"/>
                             <connections>
-                                <action selector="sliderButtonTapped:" destination="BYZ-38-t0r" id="KnL-v2-GH7"/>
+                                <action selector="sliderButtonTapped:" destination="BYZ-38-t0r" id="LYc-0w-yIT"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Cart" id="0eC-5B-U4h">
                             <inset key="imageInsets" minX="21" minY="10" maxX="1" maxY="6"/>
                             <connections>
-                                <action selector="cartButtonTapped:" destination="BYZ-38-t0r" id="BzE-Ui-1fS"/>
+                                <action selector="cartButtonTapped:" destination="BYZ-38-t0r" id="nar-Wf-ysA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="homeSearchBar" destination="4P0-A6-sVb" id="LJS-uS-N7l"/>
-                        <outlet property="homeTableView" destination="ZXy-QU-WW5" id="iQ1-Zl-qCX"/>
+                        <outlet property="homeSearchBar" destination="4P0-A6-sVb" id="eLH-Xc-oeA"/>
+                        <outlet property="homeTableView" destination="ZXy-QU-WW5" id="6Oi-ZY-dzD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.79999999999995" y="2038.8305847076463"/>
+            <point key="canvasLocation" x="1554" y="2039"/>
         </scene>
         <!--Offers-->
         <scene sceneID="mjA-dI-7ye">
@@ -312,7 +308,7 @@
         <!--Account-->
         <scene sceneID="Xwt-eL-VlT">
             <objects>
-                <viewController id="agk-fF-k29" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="agk-fF-k29" customClass="AccountViewController" customModule="GourmetEgypt_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="piv-Oh-ZNe"/>
                         <viewControllerLayoutGuide type="bottom" id="phX-MU-wvp"/>
@@ -326,12 +322,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTu-2f-OnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3951.1999999999998" y="1909.2953523238382"/>
+            <point key="canvasLocation" x="3808.8000000000002" y="1881.4092953523241"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yde-4D-jH0">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Nse-gF-IT7" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="Nse-gF-IT7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="w1x-Zy-mzx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -411,7 +407,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5s-dd-vTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="1910.1949025487258"/>
+            <point key="canvasLocation" x="2828" y="1882.3088455772115"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="nhq-4U-0TC">
@@ -470,22 +466,22 @@
             <point key="canvasLocation" x="-71.200000000000003" y="2132.3838080959522"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="g32-EM-MBs">
+        <scene sceneID="Wa4-0l-xkz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="plc-Md-oNb" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9pc-MR-8zK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HcX-S0-WGl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nkq-LM-bnn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="m7H-SO-VWm" kind="relationship" relationship="rootViewController" id="Xc2-Dc-R4q"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mqj-oJ-m5y"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MtJ-vz-Z0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ve-9Z-hdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1010.4" y="2131.4842578710645"/>
+            <point key="canvasLocation" x="744.79999999999995" y="2038.8305847076463"/>
         </scene>
     </scenes>
     <resources>
