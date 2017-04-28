@@ -11,7 +11,6 @@ import UIKit
 
 protocol TreeNode {
 	var children: [TreeNode] { get }
-//	func isEqual(with node: TreeNode) -> Bool
 }
 protocol TreeManagerDelegate: class {
     func manager(manager: SHTreeViewManager, didSelectNode node: TreeNode)
@@ -111,7 +110,6 @@ class Tree {
 class SHTreeViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
 	private var tableView: UITableView!
 	var nodes: [TreeNode] = []
-	var displayableNodes: [TreeNode] = []
 	private(set) var cellIdentifier: String
 	var tree: Tree
     weak var treeDelegate: TreeManagerDelegate?
@@ -167,10 +165,10 @@ class SHTreeViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let node = displayableNodes[indexPath.row]
-        if node.children.isEmpty {
-            treeDelegate?.manager(manager: self, didSelectNode: node)
-        }
+		let node = tree.visibleNodes[indexPath.row].0
+		if  node.children.isEmpty  {
+			treeDelegate?.manager(manager: self, didSelectNode: node)
+		}
         else {
             if self.tree.isExpanded(index: indexPath.row) {
                 self.collapseIndex(index: indexPath.row)

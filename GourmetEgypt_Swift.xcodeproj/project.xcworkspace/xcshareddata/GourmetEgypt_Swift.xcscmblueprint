@@ -1,21 +1,28 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4ACE71E959DBC10C402D1052476A59A23D5602B3",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "47FAB0A7359DE510CE7A73C48201F54A7DB34F12",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "C407AC9F1C809E917DDEBE4E94C5E05ED90D0F4D" : 9223372036854775807,
+    "47FAB0A7359DE510CE7A73C48201F54A7DB34F12" : 9223372036854775807,
     "4ACE71E959DBC10C402D1052476A59A23D5602B3" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5D375706-642E-44DB-AC25-DC0E4EE75117",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "C407AC9F1C809E917DDEBE4E94C5E05ED90D0F4D" : "GourmetEgypt_Swift\/GourmetEgypt_Swift\/",
+    "47FAB0A7359DE510CE7A73C48201F54A7DB34F12" : "Gourmet%20Egypt\/",
     "4ACE71E959DBC10C402D1052476A59A23D5602B3" : "GourmetEgypt_Swift\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "GourmetEgypt_Swift",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GourmetEgypt_Swift.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Chitrasen1984\/iosApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "47FAB0A7359DE510CE7A73C48201F54A7DB34F12"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Chitrasen1984\/iosApp.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
