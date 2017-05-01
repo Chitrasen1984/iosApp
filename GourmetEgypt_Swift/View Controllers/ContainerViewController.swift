@@ -136,6 +136,9 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
 	
 	func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
 		let gestureIsDraggingFromLeftToRight = (recognizer.velocity(in: view).x > 0)
+        guard centerNavigationController.topViewController == centerViewController else {
+            return
+        }
 		guard ((gestureIsDraggingFromLeftToRight == true && self.currentState == .bothCollapsed) ||
 			(gestureIsDraggingFromLeftToRight == false && self.currentState == .leftPanelExpanded)) else {
 				return
