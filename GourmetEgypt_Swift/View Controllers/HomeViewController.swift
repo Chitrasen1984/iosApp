@@ -19,6 +19,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var homeSearchBar: UISearchBar!
    
     var delegate: CenterViewControllerDelegate?
+    var arrOfBanners: [BannerModel] = []
     
     //MARK: View Controller Life Cycle Methods:-
     override func viewDidLoad() {
@@ -27,7 +28,12 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         self.navigationItem.titleView = companyImageLogo
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(handleTap))
         self.view.addGestureRecognizer(tapGestureRecognizer)
-        
+        for i in 0..<10 {
+            let bannerObj:BannerModel = BannerModel(id: "\(i)", title: "Banner1", bannerDescription: "Banner1", imagePath: "www.google.com", bannerType: "1")!
+            arrOfBanners.append(bannerObj)
+        }
+
+        print(arrOfBanners)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -57,12 +63,16 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrOfBanners.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "homeCell"
         let cell = homeTableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? HomeTableViewCell!
+        
+        let bannnerObj = arrOfBanners[indexPath.row]
+        cell?.headingLabel.text = bannnerObj.title
+        cell?.banner2TextLabel.text = bannnerObj.bannerDescription
         // Make sure you have this code
         //        cell.delegate = self;
         if indexPath.row==0 {

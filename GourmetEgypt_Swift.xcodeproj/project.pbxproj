@@ -26,6 +26,8 @@
 		120B1F101EAF75BA00019974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B1F0F1EAF75BA00019974 /* AppDelegate.swift */; };
 		124D84E01EB1BF2500C86745 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D84DF1EB1BF2500C86745 /* HomeTableViewCell.swift */; };
 		124D84E21EB2265E00C86745 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D84E11EB2265E00C86745 /* AccountViewController.swift */; };
+		126879BE1EBB678200ECDA0F /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126879BD1EBB678200ECDA0F /* BannerModel.swift */; };
+		126879C01EBB6B3500ECDA0F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126879BF1EBB6B3500ECDA0F /* CategoryModel.swift */; };
 		127D9F231EB0B26F00862CB7 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F221EB0B26F00862CB7 /* CategoryViewController.swift */; };
 		127D9F251EB0BA9600862CB7 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F241EB0BA9600862CB7 /* ContainerViewController.swift */; };
 		127D9F271EB0BBDA00862CB7 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9F261EB0BBDA00862CB7 /* SidePanelViewController.swift */; };
@@ -79,6 +81,8 @@
 		120B1F0F1EAF75BA00019974 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "AppDelegate Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		124D84DF1EB1BF2500C86745 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		124D84E11EB2265E00C86745 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = "View Controllers/AccountViewController.swift"; sourceTree = "<group>"; };
+		126879BD1EBB678200ECDA0F /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannerModel.swift; path = Models/BannerModel.swift; sourceTree = "<group>"; };
+		126879BF1EBB6B3500ECDA0F /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryModel.swift; path = Models/CategoryModel.swift; sourceTree = "<group>"; };
 		127D9F221EB0B26F00862CB7 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = "View Controllers/CategoryViewController.swift"; sourceTree = "<group>"; };
 		127D9F241EB0BA9600862CB7 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = "View Controllers/ContainerViewController.swift"; sourceTree = "<group>"; };
 		127D9F261EB0BBDA00862CB7 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SidePanelViewController.swift; path = "View Controllers/SidePanelViewController.swift"; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				120B1F081EAF659800019974 /* GourmetEgypt_Swift.xcdatamodeld */,
+				126879BD1EBB678200ECDA0F /* BannerModel.swift */,
+				126879BF1EBB6B3500ECDA0F /* CategoryModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				78D60E701EB4C76E00D7304D /* SubCategoryCollectionManager.swift in Sources */,
 				127D9F231EB0B26F00862CB7 /* CategoryViewController.swift in Sources */,
 				120B1F101EAF75BA00019974 /* AppDelegate.swift in Sources */,
+				126879BE1EBB678200ECDA0F /* BannerModel.swift in Sources */,
 				127D9F2E1EB0BC7F00862CB7 /* SHTreeViewManager.swift in Sources */,
 				78D60E721EB4C89D00D7304D /* SubCategoryCollectionViewCell.swift in Sources */,
 				127D9F251EB0BA9600862CB7 /* ContainerViewController.swift in Sources */,
@@ -421,6 +428,7 @@
 				78783C2F1EB628F10047963E /* ProductDetailsViewController.swift in Sources */,
 				120B1F0E1EAF65B100019974 /* HomeViewController.swift in Sources */,
 				124D84E21EB2265E00C86745 /* AccountViewController.swift in Sources */,
+				126879C01EBB6B3500ECDA0F /* CategoryModel.swift in Sources */,
 				124D84E01EB1BF2500C86745 /* HomeTableViewCell.swift in Sources */,
 				127D9F2C1EB0BC7F00862CB7 /* NodeTableViewCell.swift in Sources */,
 				78783C321EB62B8D0047963E /* ProductDetailTableViewCell.swift in Sources */,
