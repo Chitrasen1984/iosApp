@@ -36,7 +36,6 @@ class ContainerViewController: UIViewController {
 		
 		centerViewController = UIStoryboard.centerViewController()
 		centerViewController.delegate = self
-		
 		// wrap the centerViewController in a navigation controller, so we can push views to it
 		// and display bar button items in the navigation bar
 		centerNavigationController = UINavigationController(rootViewController: centerViewController)
@@ -122,11 +121,11 @@ extension ContainerViewController: CenterViewControllerDelegate {
 	
 	
 	func showShadowForCenterViewController(_ shouldShowShadow: Bool) {
-		if (shouldShowShadow) {
-			//  centerNavigationController.view.layer.shadowOpacity = 0.8
-		} else {
-			//centerNavigationController.view.layer.shadowOpacity = 0.0
-		}
+//		if (shouldShowShadow) {
+//			  centerNavigationController.view.layer.shadowOpacity = 0.8
+//		} else {
+//			centerNavigationController.view.layer.shadowOpacity = 0.0
+//		}
 	}
 	
 }

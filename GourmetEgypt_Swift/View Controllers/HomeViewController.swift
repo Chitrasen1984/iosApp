@@ -10,7 +10,6 @@ import UIKit
 @objc
 protocol CenterViewControllerDelegate {
     @objc optional func toggleLeftPanel()
-    @objc optional func toggleRightPanel()
     @objc optional func collapseSidePanels()
 }
 
@@ -29,7 +28,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(handleTap))
         self.view.addGestureRecognizer(tapGestureRecognizer)
         for i in 0..<10 {
-            let bannerObj:BannerModel = BannerModel(id: "\(i)", title: "Banner1", bannerDescription: "Banner1", imagePath: "www.google.com", bannerType: "1")!
+            let bannerObj:BannerModel = BannerModel(id: "\(i)", title: "Banner1", bannerDescription: "Banner1", imagePath: "www.google.com", bannerType: "1")
             arrOfBanners.append(bannerObj)
         }
 
@@ -69,22 +68,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         
         let cellIdentifier = "homeCell"
         let cell = homeTableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? HomeTableViewCell!
-        
-        let bannnerObj = arrOfBanners[indexPath.row]
-        cell?.headingLabel.text = bannnerObj.title
-        cell?.banner2TextLabel.text = bannnerObj.bannerDescription
-        // Make sure you have this code
-        //        cell.delegate = self;
-        if indexPath.row==0 {
-            cell?.bannerType2.isHidden = true;
-            cell?.bannerType1.isHidden = false;
-        }
-        else {
-            cell?.bannerType1.isHidden = true;
-            cell?.bannerType2.isHidden = false;
-        }
-        
-        cell!.selectionStyle = UITableViewCellSelectionStyle.none
+        cell?.configure(with: arrOfBanners[indexPath.row], indexPath: indexPath as NSIndexPath)
         return cell!
     }
 

@@ -29,5 +29,23 @@ class HomeTableViewCell: UITableViewCell {
     @IBAction func shopNowButtonTapped(_ sender: Any) {
         
     }
+    
+    public func configure(with banner: BannerModel,indexPath: NSIndexPath) {
+        let bannnerObj = banner
+        self.headingLabel.text = bannnerObj.title
+        self.banner2TextLabel.text = bannnerObj.bannerDescription
+        // Make sure you have this code
+        //        cell.delegate = self;
+        if indexPath.row==0 {
+            self.bannerType2.isHidden = true;
+            self.bannerType1.isHidden = false;
+        }
+        else {
+            self.bannerType1.isHidden = true;
+            self.bannerType2.isHidden = false;
+        }
+        
+        self.selectionStyle = UITableViewCellSelectionStyle.none
+    }
 
 }

@@ -20,14 +20,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXk-dd-DIh" userLabel="ViewZero">
-                        <rect key="frame" x="0.0" y="0.0" width="312" height="43.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="312" height="44"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sod-v5-EAJ">
-                                <rect key="frame" x="10" y="0.0" width="262" height="43.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="AEe-37-FbJ">
                                 <rect key="frame" x="272" y="7" width="30" height="30"/>
                                 <constraints>
@@ -35,13 +29,25 @@
                                     <constraint firstAttribute="height" constant="30" id="lrG-Rj-ake"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Share" translatesAutoresizingMaskIntoConstraints="NO" id="qHP-em-ZEn">
+                                <rect key="frame" x="8" y="8" width="32" height="30"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sod-v5-EAJ">
+                                <rect key="frame" x="48" y="0.0" width="42" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qHP-em-ZEn" firstAttribute="top" secondItem="BXk-dd-DIh" secondAttribute="top" constant="8" id="0pZ-z5-g2W"/>
                             <constraint firstAttribute="bottom" secondItem="sod-v5-EAJ" secondAttribute="bottom" id="1cy-vD-JKN"/>
-                            <constraint firstItem="AEe-37-FbJ" firstAttribute="leading" secondItem="sod-v5-EAJ" secondAttribute="trailing" id="2Ke-Ng-v0l"/>
                             <constraint firstItem="sod-v5-EAJ" firstAttribute="top" secondItem="BXk-dd-DIh" secondAttribute="top" id="2LB-d9-lf4"/>
-                            <constraint firstItem="sod-v5-EAJ" firstAttribute="leading" secondItem="BXk-dd-DIh" secondAttribute="leading" constant="10" id="PH1-RR-10J"/>
+                            <constraint firstAttribute="bottom" secondItem="qHP-em-ZEn" secondAttribute="bottom" constant="5.5" id="76M-E5-omX"/>
+                            <constraint firstItem="qHP-em-ZEn" firstAttribute="leading" secondItem="BXk-dd-DIh" secondAttribute="leading" constant="8" id="8Y5-lf-xxa"/>
+                            <constraint firstItem="sod-v5-EAJ" firstAttribute="leading" secondItem="qHP-em-ZEn" secondAttribute="trailing" constant="8" id="KTp-ZR-wFI"/>
+                            <constraint firstItem="AEe-37-FbJ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="sod-v5-EAJ" secondAttribute="trailing" constant="185" id="RTQ-EC-JUF"/>
                             <constraint firstItem="AEe-37-FbJ" firstAttribute="centerY" secondItem="BXk-dd-DIh" secondAttribute="centerY" id="WIy-mI-8If"/>
                             <constraint firstAttribute="trailing" secondItem="AEe-37-FbJ" secondAttribute="trailing" constant="10" id="gyo-1c-mlz"/>
                         </constraints>
@@ -56,14 +62,16 @@
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="categoryImageView" destination="qHP-em-ZEn" id="TX3-pc-AH5"/>
                 <outlet property="expandImageView" destination="AEe-37-FbJ" id="xTx-PV-cUh"/>
                 <outlet property="label" destination="sod-v5-EAJ" id="QI5-9V-m4e"/>
-                <outlet property="separatorLeftConstraint" destination="PH1-RR-10J" id="P66-N2-cBt"/>
+                <outlet property="separatorLeftConstraint" destination="KTp-ZR-wFI" id="ytP-sb-6pn"/>
             </connections>
             <point key="canvasLocation" x="0.0" y="-8"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Share" width="32" height="32"/>
         <image name="plus" width="64" height="64"/>
     </resources>
 </document>

@@ -1,0 +1,26 @@
+{
+"success": true,
+"message": "",
+"data": [
+{
+"id": "category id",
+"title": "Category1",
+"image_path": "",
+"sub_categories": [
+{
+"id": "category id",
+"title": "Subcategory11",
+"image_path": "",
+"sub_categories": [
+{
+"id": "category id",
+"title": "Subcategory111",
+"image_path": "",
+"sub_categories": []
+}
+]
+}
+]
+}
+]
+}

@@ -7,39 +7,42 @@
 //
 
 import UIKit
-
 class NodeTableViewCell: UITableViewCell {
-	
-	static let cellIdentifier = "NodeTableViewCell"
-	fileprivate var node: Node<MenuNode>?
-	
-	@IBOutlet weak var separatorLeftConstraint: NSLayoutConstraint!
-	@IBOutlet weak var label: UILabel!
+    
+    static let cellIdentifier = "NodeTableViewCell"
+    fileprivate var node: Node<CategoryModel>?
+    @IBOutlet weak var categoryImageView: UIImageView!
+    @IBOutlet weak var separatorLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var expandImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-	
-	@IBAction func didTapOnCell(_ sender: Any) {
+    
+    @IBAction func didTapOnCell(_ sender: Any) {
         
-	}
+    }
 }
 
 extension NodeTableViewCell: NodeCell {
     func configure(with node: TreeNode, level: Int, expanded: Bool) {
-		if let treeNode = node as? Node<MenuNode> {
+        if let treeNode = node as? Node<CategoryModel> {
             let value = treeNode.value
-			label.text = value.title
-			self.node = treeNode
+            label.text = value.title
+            self.node = treeNode
             expandImageView.isHidden = treeNode.children.isEmpty
-			self.separatorLeftConstraint.constant = CGFloat(level+1) * 10.0
-		}
+            if level != 0 {
+                self.categoryImageView.image = nil
+            }
+            self.separatorLeftConstraint.constant = CGFloat(level+1) * 10.0
+        }
         expandImageView.image = expanded ? UIImage(named: "minus") : UIImage(named: "plus")
-	}
+    }
 }
+

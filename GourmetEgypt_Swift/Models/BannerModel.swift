@@ -16,7 +16,7 @@ class BannerModel: NSObject {
     let bannerType: String
    
     // MARK: Initialization
-    init?(id:String, title:String, bannerDescription:String, imagePath:String, bannerType:String) {
+    init(id:String, title:String, bannerDescription:String, imagePath:String, bannerType:String) {
         self.id = id
         self.title = title
         self.bannerDescription = bannerDescription
