@@ -18,11 +18,11 @@ struct Item {
 
 struct ItemSection {
 	var name: String
-	var items: [Item]
+	var items: [ProductListModel]
 }
 
 protocol ItemCollectionManagerProtocol {
-	func manager(collectionManager: ItemCollectionManager, didSelectItem item: Item)
+	func manager(collectionManager: ItemCollectionManager, didSelectItem item: ProductListModel)
 }
 
 class ItemCollectionManager: NSObject {
@@ -64,8 +64,14 @@ extension ItemCollectionManager: UICollectionViewDelegate {
 
 extension ItemCollectionManager: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		let totalWidth = collectionView.frame.size.width - 20.0
-		return CGSize(width: totalWidth / 2.0, height: 200.0)
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flow.sectionInset = UIEdgeInsetsMake(0, 7, 0, 7)
+        let width = UIScreen.main.bounds.size.width - 21
+        flow.itemSize = CGSize(width: width/2, height: 200.0)
+        flow.minimumInteritemSpacing = 7
+        flow.minimumLineSpacing = 7
+        return flow.itemSize
+
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

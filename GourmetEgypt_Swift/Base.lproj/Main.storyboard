@@ -115,7 +115,7 @@
                                         <rect key="frame" x="0.0" y="10" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ttV-OU-u4K" id="rmR-D8-zxW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="8TM-cT-YUH" userLabel="CellImage">
@@ -217,10 +217,10 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4P0-A6-sVb" secondAttribute="trailing" id="97o-jf-nir"/>
                             <constraint firstItem="ZXy-QU-WW5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DtS-2b-Kga"/>
-                            <constraint firstItem="4P0-A6-sVb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HtA-9p-bnU"/>
                             <constraint firstItem="ZXy-QU-WW5" firstAttribute="top" secondItem="4P0-A6-sVb" secondAttribute="bottom" id="SkB-rh-cWr"/>
                             <constraint firstAttribute="trailing" secondItem="ZXy-QU-WW5" secondAttribute="trailing" id="W98-fi-nXc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZXy-QU-WW5" secondAttribute="bottom" id="tIW-F0-rzD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZXy-QU-WW5" secondAttribute="bottom" id="c0m-O2-w5L"/>
+                            <constraint firstItem="4P0-A6-sVb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gqc-YY-kXW"/>
                             <constraint firstItem="4P0-A6-sVb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w4m-cM-jNp"/>
                         </constraints>
                     </view>
@@ -492,14 +492,18 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="m7H-SO-VWm" id="I3T-kd-gHc"/>
+                                    <outlet property="delegate" destination="m7H-SO-VWm" id="qOU-HL-FBb"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6OK-bJ-rIx" firstAttribute="top" secondItem="rYM-p1-7Rm" secondAttribute="bottom" id="09d-qb-9Tf"/>
-                            <constraint firstItem="SrG-4o-N9z" firstAttribute="top" secondItem="6OK-bJ-rIx" secondAttribute="bottom" id="F9u-jz-mXo"/>
-                            <constraint firstItem="rYM-p1-7Rm" firstAttribute="top" secondItem="LfA-8y-WRU" secondAttribute="bottom" id="QZx-2r-kzQ"/>
                             <constraint firstAttribute="trailing" secondItem="rYM-p1-7Rm" secondAttribute="trailing" id="SAA-eK-2Zm"/>
+                            <constraint firstItem="SrG-4o-N9z" firstAttribute="top" secondItem="6OK-bJ-rIx" secondAttribute="bottom" id="bVP-1t-1GC"/>
+                            <constraint firstItem="rYM-p1-7Rm" firstAttribute="top" secondItem="LfA-8y-WRU" secondAttribute="bottom" id="cg8-B6-lYY"/>
                             <constraint firstAttribute="trailing" secondItem="6OK-bJ-rIx" secondAttribute="trailing" id="s4d-5B-lXJ"/>
                             <constraint firstItem="rYM-p1-7Rm" firstAttribute="leading" secondItem="TSq-vM-QgB" secondAttribute="leading" id="tHB-Pr-Vn2"/>
                             <constraint firstItem="6OK-bJ-rIx" firstAttribute="leading" secondItem="TSq-vM-QgB" secondAttribute="leading" id="xHT-Iw-woz"/>
@@ -514,7 +518,7 @@
                     <connections>
                         <outlet property="itemCollectionView" destination="6OK-bJ-rIx" id="cJ0-lU-5qw"/>
                         <outlet property="subCategoryCollectionView" destination="rYM-p1-7Rm" id="1eJ-y7-jRP"/>
-                        <segue destination="XAb-43-VbP" kind="push" identifier="ProductDetailSegue" id="4Nf-WY-sVj"/>
+                        <segue destination="XAb-43-VbP" kind="show" identifier="ProductDetailSegue" id="4Nf-WY-sVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZr-xt-iLj" sceneMemberID="firstResponder"/>
@@ -560,7 +564,7 @@
         <!--Product Detail VC-->
         <scene sceneID="5jw-Ek-Vuu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="XAb-43-VbP" userLabel="Product Detail VC" customClass="ProductDetailsViewController" customModule="GourmetEgypt_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="XAb-43-VbP" userLabel="Product Detail VC" customClass="ProductDetailsViewController" customModule="GourmetEgypt_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X8z-UV-sUn"/>
                         <viewControllerLayoutGuide type="bottom" id="YPD-bT-Ot4"/>
@@ -577,7 +581,7 @@
                                         <rect key="frame" x="0.0" y="10" width="375" height="521"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="khy-9c-lR1" id="o6r-Zp-Ift">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="520"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="521"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="8aU-Ns-IN0">
@@ -783,7 +787,7 @@
                                         <rect key="frame" x="0.0" y="531" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dUI-a6-QWY" id="gls-pZ-7BA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fax-S2-gPW" userLabel="You might also like Collection View">
@@ -796,7 +800,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bdB-zf-ch7">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="youMightLikeCell" id="bdB-zf-ch7">
                                                             <rect key="frame" x="0.0" y="25.5" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -847,10 +851,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7jU-Bv-S7o" firstAttribute="top" secondItem="X8z-UV-sUn" secondAttribute="bottom" id="63M-9y-Opu"/>
+                            <constraint firstItem="YPD-bT-Ot4" firstAttribute="top" secondItem="7jU-Bv-S7o" secondAttribute="bottom" id="8ZR-Et-f7Y"/>
+                            <constraint firstItem="7jU-Bv-S7o" firstAttribute="top" secondItem="X8z-UV-sUn" secondAttribute="bottom" id="BaR-Ay-Svr"/>
                             <constraint firstItem="7jU-Bv-S7o" firstAttribute="leading" secondItem="Rfm-02-ye1" secondAttribute="leading" id="Nbv-zW-xjw"/>
                             <constraint firstAttribute="trailing" secondItem="7jU-Bv-S7o" secondAttribute="trailing" id="XDf-Cv-VPB"/>
-                            <constraint firstItem="YPD-bT-Ot4" firstAttribute="top" secondItem="7jU-Bv-S7o" secondAttribute="bottom" id="hWM-he-TKI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chilled Aussie Beef Shabu" id="bFg-EB-lu2">

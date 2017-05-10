@@ -23,8 +23,6 @@ class BannerModel: NSObject {
         self.imagePath = imagePath
         self.bannerType = bannerType
         super.init()
-        
-        
     }
 
 }

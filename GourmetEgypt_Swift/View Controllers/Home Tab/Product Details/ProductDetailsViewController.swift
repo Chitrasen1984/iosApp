@@ -11,7 +11,7 @@ import UIKit
 class ProductDetailsViewController: UIViewController {
 
 	@IBOutlet weak var productDetailTableView: UITableView!
-	var item: Item!
+	var item: ProductListModel!
 	var weeklySection: ItemSection?
 	var youMayLikeSection: ItemSection?
 	
@@ -20,10 +20,10 @@ class ProductDetailsViewController: UIViewController {
 		productDetailTableView.rowHeight = UITableViewAutomaticDimension
 		productDetailTableView.estimatedRowHeight = 400.0
 		
-		let items = [Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: ""),
-		             Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: ""),
-		             Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: ""),
-		             Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: "")]
+        let items = [ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00"),
+                     ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00"),
+                     ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00"),
+                     ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00")]
 		weeklySection = ItemSection(name: "Weekly", items: items)
 		youMayLikeSection = ItemSection(name: "You may like", items: items)
 		
@@ -34,17 +34,6 @@ class ProductDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ProductDetailsViewController: UITableViewDataSource {

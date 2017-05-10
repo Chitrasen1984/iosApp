@@ -180,9 +180,11 @@ private extension UIStoryboard {
 }
 
 extension ContainerViewController: SidePanelViewControllerDelegate {
-	func nodeSelected(_ node: MenuNode) {
-		let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CategoryViewController")
-		collapseSidePanels()
-		centerViewController.navigationController?.pushViewController(viewController, animated: true)
+	func nodeSelected(_ node: CategoryModel) {
+        collapseSidePanels()
+//		let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CategoryViewController")
+//		centerViewController.navigationController?.pushViewController(viewController, animated: true)
+        centerViewController.navigationController?.pushViewController(ProductListViewController(nibName: "ProductListViewController", bundle: nil), animated: true );
+
 	}
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController" customModule="GourmetEgypt_Swift" customModuleProvider="target">
+            <connections>
+                <outlet property="productDetailTableView" destination="TwP-xt-buo" id="edU-xY-VO1"/>
+                <outlet property="view" destination="Ez2-eS-AJs" id="SWf-aX-aTb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ez2-eS-AJs">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="865"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="521" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-xt-buo">
+                    <rect key="frame" x="0.0" y="64" width="363" height="801"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Lmn-Wz-EGx"/>
+                        <outlet property="delegate" destination="-1" id="X3n-47-g48"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TwP-xt-buo" firstAttribute="leading" secondItem="Ez2-eS-AJs" secondAttribute="leading" id="1Aa-KH-Lqk"/>
+                <constraint firstAttribute="bottom" secondItem="TwP-xt-buo" secondAttribute="bottom" id="B0v-WY-b99"/>
+                <constraint firstItem="TwP-xt-buo" firstAttribute="top" secondItem="Ez2-eS-AJs" secondAttribute="top" constant="64" id="Xat-lj-uJ6"/>
+                <constraint firstAttribute="trailing" secondItem="TwP-xt-buo" secondAttribute="trailing" id="XwT-C1-0Cl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="8.5" y="-112.5"/>
+        </view>
+    </objects>
+</document>

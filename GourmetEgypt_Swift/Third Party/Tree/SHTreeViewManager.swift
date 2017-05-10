@@ -105,6 +105,16 @@ class Tree {
 		let currentNode = visibleNodes[index]
 		return nextIndex < visibleNodes.count && visibleNodes[nextIndex].1 == currentNode.1 + 1
 	}
+    //TO DO:
+//    func getSibling(index:Int)-> [TreeNode] {
+//        guard index < visibleNodes.count else {
+//            return []
+//        }
+//        let childrenNodes = visibleNodes[index].0.children
+//        guard !childrenNodes.isEmpty else {
+//            return []
+//        }
+//    }
 }
 
 class SHTreeViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {

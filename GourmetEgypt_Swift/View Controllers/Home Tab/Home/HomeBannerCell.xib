@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="170" id="bMH-Fv-T6F" userLabel="Home Banner Cell" customClass="HomeTableViewCell" customModule="GourmetEgypt_Swift">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bMH-Fv-T6F" id="f8F-MO-sHu">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="7W3-5T-6rA" userLabel="CellImage">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="164.5"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXJ-GH-cRF" userLabel="BannerView1">
+                        <rect key="frame" x="241" y="14" width="110" height="142"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorel Ipsum Dolor sit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2v-Wq-e6e" userLabel="Title Label">
+                                <rect key="frame" x="8" y="8" width="94" height="33.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xzkjgxzjkgxjkgxckg bcxzkjgkjxcjkxzkjxzcgjk mvkcxzbjxkjcxzKJXCZVb vcxzjkckjckj " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-U9-jUU" userLabel="DescriptionLabel">
+                                <rect key="frame" x="8" y="49" width="94" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWH-PU-mP0">
+                                <rect key="frame" x="8" y="107" width="94" height="27"/>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="IHr-wJ-jJA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="SHOP NOW"/>
+                                <connections>
+                                    <action selector="shopNowButtonTapped:" destination="bMH-Fv-T6F" eventType="touchUpInside" id="WIa-qK-Juc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.81176470590000005" blue="0.80784313730000001" alpha="0.79877310739999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V2v-Wq-e6e" firstAttribute="top" secondItem="sXJ-GH-cRF" secondAttribute="top" constant="8" id="0bY-fM-YLX"/>
+                            <constraint firstAttribute="width" constant="110" id="7Rt-4v-8uo"/>
+                            <constraint firstItem="V2v-Wq-e6e" firstAttribute="leading" secondItem="sXJ-GH-cRF" secondAttribute="leading" constant="8" id="8Jy-iH-R1J"/>
+                            <constraint firstAttribute="trailing" secondItem="yWH-PU-mP0" secondAttribute="trailing" constant="8" id="FGx-vk-LT4"/>
+                            <constraint firstItem="yWH-PU-mP0" firstAttribute="leading" secondItem="sXJ-GH-cRF" secondAttribute="leading" constant="8" id="Sh8-ds-KHH"/>
+                            <constraint firstAttribute="bottom" secondItem="yWH-PU-mP0" secondAttribute="bottom" constant="8" id="W5i-io-Vc0"/>
+                            <constraint firstItem="MiL-U9-jUU" firstAttribute="top" secondItem="V2v-Wq-e6e" secondAttribute="bottom" constant="7.5" id="ffU-dQ-mM9"/>
+                            <constraint firstAttribute="trailing" secondItem="V2v-Wq-e6e" secondAttribute="trailing" constant="8" id="tzy-WU-UHD"/>
+                            <constraint firstItem="MiL-U9-jUU" firstAttribute="leading" secondItem="V2v-Wq-e6e" secondAttribute="leading" id="uwK-ou-hUV"/>
+                            <constraint firstItem="MiL-U9-jUU" firstAttribute="trailing" secondItem="V2v-Wq-e6e" secondAttribute="trailing" id="yT1-eX-4hE"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxD-DX-uTE" userLabel="BannerView2">
+                        <rect key="frame" x="77.5" y="35" width="220.5" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorel Ipsum Dor Sit Amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQa-HL-POm" userLabel="Banner2Label">
+                                <rect key="frame" x="46" y="32" width="121" height="41"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.81176470590000005" blue="0.80784313730000001" alpha="0.49158230629999999" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pQa-HL-POm" firstAttribute="centerX" secondItem="yxD-DX-uTE" secondAttribute="centerX" constant="-3.75" id="Wp1-JG-tmn"/>
+                            <constraint firstItem="pQa-HL-POm" firstAttribute="centerY" secondItem="yxD-DX-uTE" secondAttribute="centerY" multiplier="1:1.5" constant="19.166666666666671" id="e2G-Oz-y6c"/>
+                            <constraint firstItem="pQa-HL-POm" firstAttribute="width" secondItem="yxD-DX-uTE" secondAttribute="width" constant="-99.5" id="pdt-f7-SHT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="sXJ-GH-cRF" secondAttribute="trailing" constant="16" id="2Cb-jW-ffF"/>
+                    <constraint firstItem="yxD-DX-uTE" firstAttribute="centerY" secondItem="f8F-MO-sHu" secondAttribute="centerY" id="2MV-iv-1u4"/>
+                    <constraint firstItem="7W3-5T-6rA" firstAttribute="leading" secondItem="f8F-MO-sHu" secondAttribute="leading" id="EOI-48-19R"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="sXJ-GH-cRF" secondAttribute="bottom" constant="6" id="YBY-3d-1qY"/>
+                    <constraint firstItem="7W3-5T-6rA" firstAttribute="top" secondItem="f8F-MO-sHu" secondAttribute="top" id="mE5-1t-oJB"/>
+                    <constraint firstAttribute="trailing" secondItem="7W3-5T-6rA" secondAttribute="trailing" id="myw-lh-36j"/>
+                    <constraint firstItem="sXJ-GH-cRF" firstAttribute="top" secondItem="f8F-MO-sHu" secondAttribute="topMargin" constant="6" id="vJz-Ai-mqI"/>
+                    <constraint firstItem="yxD-DX-uTE" firstAttribute="centerX" secondItem="f8F-MO-sHu" secondAttribute="centerX" id="xZM-mi-OKc"/>
+                    <constraint firstAttribute="bottom" secondItem="7W3-5T-6rA" secondAttribute="bottom" constant="5" id="zkg-CR-2L4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="yxD-DX-uTE" firstAttribute="width" secondItem="bMH-Fv-T6F" secondAttribute="width" multiplier="1:1.7" id="Csq-ZT-otW"/>
+                <constraint firstItem="yxD-DX-uTE" firstAttribute="height" secondItem="bMH-Fv-T6F" secondAttribute="height" multiplier="1:1.7" id="GQf-Wm-V11"/>
+            </constraints>
+            <connections>
+                <outlet property="banner2TextLabel" destination="pQa-HL-POm" id="wgy-zb-wad"/>
+                <outlet property="bannerType1" destination="sXJ-GH-cRF" id="gYX-OX-aYE"/>
+                <outlet property="bannerType2" destination="yxD-DX-uTE" id="P1E-cK-ByR"/>
+                <outlet property="cellImage" destination="7W3-5T-6rA" id="tuD-L1-BMx"/>
+                <outlet property="descriptionLabel" destination="MiL-U9-jUU" id="D5G-bw-Uw5"/>
+                <outlet property="headingLabel" destination="V2v-Wq-e6e" id="KXf-gq-gEQ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="1.png" width="800" height="398"/>
+    </resources>
+</document>

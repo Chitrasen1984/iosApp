@@ -21,7 +21,7 @@ struct MenuNode {
     
 }
 protocol SidePanelViewControllerDelegate {
-	func nodeSelected(_ node: MenuNode)
+	func nodeSelected(_ node: CategoryModel)
 }
 
 class SidePanelViewController: UIViewController {
@@ -100,7 +100,7 @@ class SidePanelViewController: UIViewController {
 
 extension SidePanelViewController: TreeManagerDelegate {
     func manager(manager: SHTreeViewManager, didSelectNode node: TreeNode) {
-        if let treeNode = node as? Node<MenuNode> {
+        if let treeNode = node as? Node<CategoryModel> {
            delegate?.nodeSelected(treeNode.value)
         }
     }

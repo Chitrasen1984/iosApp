@@ -29,9 +29,17 @@ class ItemCollectionViewCell: UICollectionViewCell {
 	
 	}
 	
-	func configure(item: Item) {
-		titleLabel.text = item.name
-		priceLabel.text = item.price
-		favouriteButton.isSelected = item.isFavorited
+	func configure(item: ProductListModel) {
+        titleLabel.text = item.title
+        priceLabel.text = item.price
+        favouriteButton.isSelected = item.isFavourite
+        
+        self.layer.shadowOffset = CGSize(width: 1, height: 0);
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowRadius = 5;
+        self.layer.shadowOpacity = 0.25;
+        self.clipsToBounds = false
+        self.layer.masksToBounds = false
+		
 	}
 }

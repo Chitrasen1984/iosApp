@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class SubCategoryCollectionManager: NSObject {
-    var categories: [String] = []
+    var categories: [CategoryModel] = []
 }
 
 extension SubCategoryCollectionManager: UICollectionViewDataSource {
@@ -20,8 +20,9 @@ extension SubCategoryCollectionManager: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "segmentCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubCategoryCollectionViewCell.cellIdentifier, for: indexPath)
         if let subCategoryCell = cell as? SubCategoryCollectionViewCell {
             subCategoryCell.configure(category: categories[indexPath.row])
         }
@@ -39,10 +40,16 @@ extension SubCategoryCollectionManager: UICollectionViewDelegate {
 
 extension SubCategoryCollectionManager: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let category = categories[indexPath.row]
-//        let label = UILabel()
-//        label.text = category
-//        let size = label.sizeThatFits(CGSize(width: 100.0, height: 50.0))
-        return CGSize(width: 100.0, height: 50.0)
+        let category = categories[indexPath.row]
+        let label = UILabel()
+        label.text = category.title
+        let size = label.sizeThatFits(CGSize(width: 100.0, height: 50.0))
+        if size.width<60 {
+            return CGSize(width: 60.0, height: 50.0)
+        }
+        else{
+            return CGSize(width: size.width + 10, height: 50.0)
+        }
+//        return CGSize(width: 100.0, height: 50.0)
     }
 }

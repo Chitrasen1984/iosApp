@@ -15,7 +15,7 @@ class CategoryModel: NSObject {
     let imagePath: String
     var subCategories: [CategoryModel]
     
-    init?(id: String, title: String, imagePath: String, subCategories: [CategoryModel]) {
+    init(id: String, title: String, imagePath: String, subCategories: [CategoryModel]) {
         self.id = id
         self.title = title
         self.imagePath = imagePath

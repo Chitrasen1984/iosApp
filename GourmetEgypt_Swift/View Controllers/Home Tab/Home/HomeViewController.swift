@@ -50,6 +50,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func cartButtonTapped(_ sender: Any) {
+        self.navigationController?.pushViewController(ProductListViewController(nibName: "ProductListViewController", bundle: nil), animated: true );
     }
     @IBAction func sliderButtonTapped(_ sender: Any) {
         self.delegate?.toggleLeftPanel!()

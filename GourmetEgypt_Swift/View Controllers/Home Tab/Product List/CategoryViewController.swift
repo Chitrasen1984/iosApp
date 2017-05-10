@@ -33,10 +33,10 @@ class CategoryViewController: UIViewController {
 
 		itemCollectionView.dataSource = itemCollectionManager
 		itemCollectionView.delegate = itemCollectionManager
-		let items = [Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: ""),
-		Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: ""),
-		Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: ""),
-		Item(name: "South African Angus Veel Rump Cap Roast", price: "EGP 184.00", isFavorited: false, imageUrl: "")]
+        let items = [ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00"),
+                     ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00"),
+                     ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00"),
+                     ProductListModel(id: "1", title: "South African Angus Veel Rump Cap Roast", isFavourite: false, imagePath: "", price: "EGP 184.00")]
 		let popularSection = ItemSection(name: "Most Popular", items: items)
 		let weeklySection = ItemSection(name: "Weekly", items: items)
 		let monthlySection = ItemSection(name: "Monthly", items: items)
@@ -51,7 +51,12 @@ class CategoryViewController: UIViewController {
 		subCategoryCollectionView.register(nib, forCellWithReuseIdentifier: "segmentCell")
 		subCategoryCollectionView.dataSource = subCategoryManager
 		subCategoryCollectionView.delegate = subCategoryManager
-		subCategoryManager.categories = ["All", "Beef", "Beef & Veel", "Poultry", "Lamb", "Frozen"]
+        subCategoryManager.categories = [CategoryModel(id: "1", title: "All", imagePath: "www.google.com", subCategories: []),CategoryModel(id: "2", title: "Beef", imagePath: "www.google.com", subCategories: []),
+            CategoryModel(id: "3", title: "Beef & Veel", imagePath: "www.google.com", subCategories: []),
+            CategoryModel(id: "4", title: "Poultry", imagePath: "www.google.com", subCategories: []),
+            CategoryModel(id: "5", title: "Lamb", imagePath: "www.google.com", subCategories: []),
+            CategoryModel(id: "6", title: "Frozen", imagePath: "www.google.com", subCategories: [])]
+//		subCategoryManager.categories = ["All", "Beef", "Beef & Veel", "Poultry", "Lamb", "Frozen"]
 		subCategoryCollectionView.reloadData()
 		subCategoryCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .bottom)
 	}
@@ -71,7 +76,7 @@ class CategoryViewController: UIViewController {
 		switch segue.identifier! {
 		case "ProductDetailSegue":
 			if let vc = segue.destination as? ProductDetailsViewController {
-				vc.item = sender as? Item
+				vc.item = sender as? ProductListModel
 			}
 		default:
 			super.prepare(for: segue, sender: nil)
@@ -81,9 +86,11 @@ class CategoryViewController: UIViewController {
 }
 
 extension CategoryViewController: ItemCollectionManagerProtocol {
-	func manager(collectionManager: ItemCollectionManager, didSelectItem item: Item) {
-		performSegue(withIdentifier: "ProductDetailSegue", sender: item)
-	}
+    func manager(collectionManager: ItemCollectionManager, didSelectItem item: ProductListModel) {
+        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ProductDetailsViewController")
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
 }
 
 
