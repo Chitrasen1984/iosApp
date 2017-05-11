@@ -12,12 +12,17 @@ class ItemCollectionTableViewCell: UITableViewCell {
 	
 	@IBOutlet weak var itemCollectionView: UICollectionView!
 	let itemCollectionManager: ItemCollectionManager = ItemCollectionManager()
+    static let cellIdentifier = "itemCell"
+    static let nibName = "ItemCollectionTableViewCell"
+   
 
 	@IBOutlet weak var headerLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layoutMargins = UIEdgeInsets.zero
+        self.separatorInset = UIEdgeInsets.zero
 		
-		let nib = UINib(nibName: "ItemCollectionViewCell", bundle: Bundle.main)
+        let nib = UINib(nibName: "ItemCollectionViewCell", bundle: Bundle.main)
 		itemCollectionView.register(nib, forCellWithReuseIdentifier: "itemCell")
 		let headerNib = UINib(nibName: "ItemCollectionHeaderReusableView", bundle: Bundle.main)
 		itemCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ItemCollectionHeader")

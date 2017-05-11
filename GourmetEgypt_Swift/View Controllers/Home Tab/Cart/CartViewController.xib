@@ -12,6 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartViewController" customModule="GourmetEgypt_Swift" customModuleProvider="target">
             <connections>
                 <outlet property="cartTableView" destination="mFp-O5-wcQ" id="1Kf-NZ-gH5"/>
+                <outlet property="checkOutAmountLabel" destination="TSz-IL-Oc3" id="IKz-vz-SjL"/>
+                <outlet property="checkOutLabel" destination="Uk5-Tb-yfe" id="b5F-gj-eOU"/>
+                <outlet property="deliveryLocationLabel" destination="TNn-jK-vbV" id="Hxl-Vj-Jrr"/>
+                <outlet property="totalItemNotificationLabel" destination="qzi-RH-Uh4" id="OIZ-CQ-gdW"/>
+                <outlet property="totalItemsInCartLabel" destination="Rx9-dE-0MQ" id="Oka-Ch-HVB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,13 +29,13 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cart has 3 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzi-RH-Uh4">
-                            <rect key="frame" x="104" y="7" width="168" height="20"/>
+                            <rect key="frame" x="104" y="7" width="168" height="20.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Delivery Location: Zamlek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNn-jK-vbV">
-                            <rect key="frame" x="112" y="29" width="152" height="13"/>
+                            <rect key="frame" x="112" y="29.5" width="152" height="13"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -45,7 +50,7 @@
                             <state key="normal" backgroundImage="Cart"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-dE-0MQ">
-                            <rect key="frame" x="343" y="4" width="8" height="15"/>
+                            <rect key="frame" x="343" y="4" width="8" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -72,23 +77,50 @@
                         <constraint firstItem="Rx9-dE-0MQ" firstAttribute="centerX" secondItem="Tl8-pE-6KI" secondAttribute="centerX" id="s1w-Oc-4gL"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mFp-O5-wcQ" userLabel="Cart Table View">
-                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="148" translatesAutoresizingMaskIntoConstraints="NO" id="mFp-O5-wcQ" userLabel="Cart Table View">
+                    <rect key="frame" x="0.0" y="70" width="375" height="553"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="ORo-5s-ehK"/>
                         <outlet property="delegate" destination="-1" id="U6N-9K-dey"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN5-A3-AfM">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.42352941176470588" green="0.69411764705882351" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="checkOutButtonTapped:" destination="-1" eventType="touchUpInside" id="KlD-fO-EJO"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECKOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk5-Tb-yfe">
+                    <rect key="frame" x="16" y="637" width="78" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP 98.24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSz-IL-Oc3">
+                    <rect key="frame" x="291" y="637.5" width="68" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="mFp-O5-wcQ" secondAttribute="trailing" id="22c-bg-LRR"/>
-                <constraint firstAttribute="bottom" secondItem="mFp-O5-wcQ" secondAttribute="bottom" id="4Fy-bj-noW"/>
+                <constraint firstAttribute="bottom" secondItem="mFp-O5-wcQ" secondAttribute="bottom" constant="44" id="4Fy-bj-noW"/>
+                <constraint firstItem="Uk5-Tb-yfe" firstAttribute="centerY" secondItem="UN5-A3-AfM" secondAttribute="centerY" id="8eI-rr-fJn"/>
+                <constraint firstItem="UN5-A3-AfM" firstAttribute="top" secondItem="mFp-O5-wcQ" secondAttribute="bottom" id="J6T-lJ-vpz"/>
+                <constraint firstItem="TSz-IL-Oc3" firstAttribute="centerY" secondItem="Uk5-Tb-yfe" secondAttribute="centerY" id="SxW-Po-RpX"/>
                 <constraint firstItem="mFp-O5-wcQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zgc-zj-g7O"/>
+                <constraint firstAttribute="bottom" secondItem="UN5-A3-AfM" secondAttribute="bottom" id="Zjy-3D-Qzl"/>
+                <constraint firstAttribute="trailing" secondItem="TSz-IL-Oc3" secondAttribute="trailing" constant="16" id="cn7-1C-qVI"/>
                 <constraint firstItem="mFp-O5-wcQ" firstAttribute="top" secondItem="DP7-QF-9BD" secondAttribute="bottom" id="csw-Kl-UgP"/>
+                <constraint firstItem="UN5-A3-AfM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hHt-bj-0AG"/>
                 <constraint firstAttribute="trailing" secondItem="DP7-QF-9BD" secondAttribute="trailing" id="jet-Hk-c0h"/>
                 <constraint firstItem="DP7-QF-9BD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pIv-41-mZQ"/>
+                <constraint firstItem="Uk5-Tb-yfe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="s8F-pF-Qwx"/>
+                <constraint firstAttribute="trailing" secondItem="UN5-A3-AfM" secondAttribute="trailing" id="uyb-NK-OWD"/>
                 <constraint firstItem="DP7-QF-9BD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="vbM-Jq-qi7"/>
             </constraints>
             <point key="canvasLocation" x="-13.5" y="38.5"/>

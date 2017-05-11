@@ -26,6 +26,30 @@ class ProductListViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         self.navigationItem.title = "Meat and Seafood(100+)"
         
+        let navigationTitleFont = UIFont(name: "HelveticaNeue-Medium", size: 15)!
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationTitleFont]
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"Cart"), style: .plain, target: self, action: #selector(cartButtonTapped))
+        self.navigationItem.rightBarButtonItem?.imageInsets = UIEdgeInsetsMake(10, 21, 6, 1)
+        
+        let btn1 = UIButton(type: .custom)
+        btn1.setImage(UIImage(named: "Back"), for: .normal)
+        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btn1.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: btn1)
+        
+        let btn2 = UIButton(type: .custom)
+        btn2.setImage(UIImage(named: "SearchBar"), for: .normal)
+        btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btn2.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: -8, bottom: 0, right: 8)
+        btn2.addTarget(self, action: #selector(searchButtonPressed), for: .touchUpInside)
+        let item2 = UIBarButtonItem(customView: btn2)
+       
+        //To add space to left
+        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
+        negativeSpacer.width = -18;
+        
+        self.navigationItem.setLeftBarButtonItems([negativeSpacer, item1, item2], animated: true)
+        
         self.categoriesView.layer.shadowOffset = CGSize(width: 1, height: 2);
         self.categoriesView.layer.shadowColor = UIColor.darkGray.cgColor
         self.categoriesView.layer.shadowRadius = 5;
@@ -39,10 +63,10 @@ class ProductListViewController: UIViewController {
     }
     
     func configureItemCollectionView() {
-        let nib = UINib(nibName: "ItemCollectionViewCell", bundle: Bundle.main)
-        itemCollectionView.register(nib, forCellWithReuseIdentifier: "itemCell")
-        let headerNib = UINib(nibName: "ItemCollectionHeaderReusableView", bundle: Bundle.main)
-        itemCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ItemCollectionHeader")
+        let nib = UINib(nibName: ItemCollectionViewCell.nibName, bundle: Bundle.main)
+        itemCollectionView.register(nib, forCellWithReuseIdentifier: ItemCollectionViewCell.cellIdentifier)
+        let headerNib = UINib(nibName: ItemCollectionHeaderReusableView.nibName, bundle: Bundle.main)
+        itemCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ItemCollectionHeaderReusableView.reuseIdentifier)
         
         itemCollectionView.dataSource = itemCollectionManager
         itemCollectionView.delegate = itemCollectionManager
@@ -94,13 +118,29 @@ class ProductListViewController: UIViewController {
             super.prepare(for: segue, sender: nil)
         }
     }
+    
+    //MARK: IBAction Methods:-
+    
+    func cartButtonTapped() {
+        
+    }
+    
+    func backButtonPressed() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func searchButtonPressed() {
+        
+    }
+
 
 }
 extension ProductListViewController: ItemCollectionManagerProtocol {
     func manager(collectionManager: ItemCollectionManager, didSelectItem item: ProductListModel) {
-////        performSegue(withIdentifier: "ProductDetailSegue", sender: item)
-//        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ProductDetailsViewController")
-//        self.navigationController?.pushViewController(viewController, animated: true)
-         self.navigationController?.pushViewController(ProductDetailViewController(nibName: "ProductDetailViewController", bundle: nil), animated: true );
+//        performSegue(withIdentifier: "ProductDetailSegue", sender: item)
+        let vc = ProductDetailViewController(nibName: ProductDetailViewController.nibName, bundle: nil)
+        vc.productListObj = item as ProductListModel
+        self.navigationController?.pushViewController(vc, animated: true );
     }
 }
+

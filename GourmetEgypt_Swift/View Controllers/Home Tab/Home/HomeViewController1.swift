@@ -67,7 +67,6 @@ class HomeViewController1: UIViewController, UITableViewDataSource {
         return arrOfBanners.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cellIdentifier = "homeCell"
         let cell = homeTableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? HomeTableViewCell!
         cell?.configure(with: arrOfBanners[indexPath.row], indexPath: indexPath as NSIndexPath)

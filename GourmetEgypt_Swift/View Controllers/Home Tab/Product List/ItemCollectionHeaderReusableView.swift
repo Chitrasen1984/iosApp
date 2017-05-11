@@ -11,6 +11,8 @@ import UIKit
 class ItemCollectionHeaderReusableView: UICollectionReusableView {
 
 	@IBOutlet weak var titleLabel: UILabel!
+    static let reuseIdentifier = "ItemCollectionHeader"
+    static let nibName = "ItemCollectionHeaderReusableView"
 	
     override func awakeFromNib() {
         super.awakeFromNib()

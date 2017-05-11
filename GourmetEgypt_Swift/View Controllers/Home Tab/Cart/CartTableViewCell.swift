@@ -10,6 +10,15 @@ import UIKit
 
 class CartTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productQuantityLabel: UILabel!
+    @IBOutlet weak var offerDescription: UILabel!
+    @IBOutlet weak var previousPriceLabel: UILabel!
+    @IBOutlet weak var currentPriceLabel: UILabel!
+    @IBOutlet weak var noOfItemsTextField: UITextField!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +30,7 @@ class CartTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func removeButtonPressed(_ sender: Any) {
+        
+    }
 }

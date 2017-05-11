@@ -21,8 +21,9 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="521" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-xt-buo">
-                    <rect key="frame" x="0.0" y="64" width="363" height="801"/>
+                    <rect key="frame" x="0.0" y="64" width="363" height="781"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Lmn-Wz-EGx"/>
                         <outlet property="delegate" destination="-1" id="X3n-47-g48"/>
@@ -32,7 +33,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="TwP-xt-buo" firstAttribute="leading" secondItem="Ez2-eS-AJs" secondAttribute="leading" id="1Aa-KH-Lqk"/>
-                <constraint firstAttribute="bottom" secondItem="TwP-xt-buo" secondAttribute="bottom" id="B0v-WY-b99"/>
+                <constraint firstAttribute="bottom" secondItem="TwP-xt-buo" secondAttribute="bottom" constant="20" id="B0v-WY-b99"/>
                 <constraint firstItem="TwP-xt-buo" firstAttribute="top" secondItem="Ez2-eS-AJs" secondAttribute="top" constant="64" id="Xat-lj-uJ6"/>
                 <constraint firstAttribute="trailing" secondItem="TwP-xt-buo" secondAttribute="trailing" id="XwT-C1-0Cl"/>
             </constraints>

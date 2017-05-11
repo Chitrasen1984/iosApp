@@ -26,7 +26,7 @@
                             <constraint firstAttribute="width" constant="80" id="Yp4-4U-jMh"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Chilled Danish Beef Maxican Susage" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-L7-Epm">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Chilled Danish Beef Maxican Susage" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-L7-Epm">
                         <rect key="frame" x="95" y="10" width="136" height="29"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                         <nil key="textColor"/>
@@ -38,20 +38,24 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10% off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Np-Hy-2iB">
-                        <rect key="frame" x="95" y="59" width="48" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10% off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Np-Hy-2iB">
+                        <rect key="frame" x="95" y="59" width="40.5" height="13.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-52-yHq">
-                        <rect key="frame" x="95" y="73" width="65" height="19"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-52-yHq">
+                        <rect key="frame" x="95" y="73" width="62" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="Pkh-LE-PWZ"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                         <state key="normal" title="X Remove">
                             <color key="titleColor" red="0.77647058823529413" green="0.19607843137254902" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="removeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vae-Dy-EZN"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP 26.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-r8-xWE">
                         <rect key="frame" x="254" y="10" width="58" height="14"/>
@@ -65,32 +69,53 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJN-VY-vk6">
-                        <rect key="frame" x="261" y="50" width="39" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJN-VY-vk6">
+                        <rect key="frame" x="282" y="50" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="6xL-tV-j8w"/>
+                            <constraint firstAttribute="width" constant="30" id="lIo-70-snB"/>
+                        </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="wvH-Kp-q0j"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6Np-Hy-2iB" firstAttribute="leading" secondItem="CcP-YH-NTK" secondAttribute="leading" id="0zl-Ja-2nZ"/>
+                    <constraint firstItem="6Np-Hy-2iB" firstAttribute="top" secondItem="CcP-YH-NTK" secondAttribute="bottom" constant="7" id="4rn-Ix-QpG"/>
                     <constraint firstItem="r39-Fi-X6g" firstAttribute="height" secondItem="ikw-r8-xWE" secondAttribute="height" id="Bku-Xi-pSj"/>
+                    <constraint firstItem="mFs-52-yHq" firstAttribute="top" secondItem="6Np-Hy-2iB" secondAttribute="bottom" constant="0.5" id="DGt-KF-McP"/>
                     <constraint firstItem="ikw-r8-xWE" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Fwl-vI-ghQ"/>
                     <constraint firstItem="ikw-r8-xWE" firstAttribute="top" secondItem="c4P-L7-Epm" secondAttribute="top" id="GNZ-2g-hkc"/>
                     <constraint firstItem="c4P-L7-Epm" firstAttribute="top" secondItem="xeB-7o-1wM" secondAttribute="top" id="Lkn-3z-Hgg"/>
                     <constraint firstItem="r39-Fi-X6g" firstAttribute="leading" secondItem="ikw-r8-xWE" secondAttribute="leading" id="LmN-bl-CFe"/>
                     <constraint firstItem="CcP-YH-NTK" firstAttribute="leading" secondItem="c4P-L7-Epm" secondAttribute="leading" id="N47-8j-fZQ"/>
                     <constraint firstItem="r39-Fi-X6g" firstAttribute="trailing" secondItem="ikw-r8-xWE" secondAttribute="trailing" id="OF3-Z3-73z"/>
+                    <constraint firstItem="fJN-VY-vk6" firstAttribute="trailing" secondItem="r39-Fi-X6g" secondAttribute="trailing" id="OPe-K2-mjg"/>
                     <constraint firstItem="CcP-YH-NTK" firstAttribute="top" secondItem="c4P-L7-Epm" secondAttribute="bottom" id="Zwb-a3-EJE"/>
                     <constraint firstItem="xeB-7o-1wM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cWg-B7-CIh"/>
                     <constraint firstItem="r39-Fi-X6g" firstAttribute="width" secondItem="ikw-r8-xWE" secondAttribute="width" id="fcX-ea-2ZW"/>
                     <constraint firstItem="ikw-r8-xWE" firstAttribute="leading" secondItem="c4P-L7-Epm" secondAttribute="trailing" constant="23" id="gNe-PQ-WfV"/>
                     <constraint firstItem="r39-Fi-X6g" firstAttribute="top" secondItem="ikw-r8-xWE" secondAttribute="bottom" constant="2" id="lhk-Mi-xf8"/>
+                    <constraint firstItem="mFs-52-yHq" firstAttribute="leading" secondItem="6Np-Hy-2iB" secondAttribute="leading" id="nzK-00-zLC"/>
                     <constraint firstItem="c4P-L7-Epm" firstAttribute="leading" secondItem="xeB-7o-1wM" secondAttribute="trailing" constant="7" id="oI0-OT-yzy"/>
+                    <constraint firstItem="fJN-VY-vk6" firstAttribute="top" secondItem="r39-Fi-X6g" secondAttribute="bottom" constant="10" id="w2A-MB-MWl"/>
                     <constraint firstItem="xeB-7o-1wM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="yYQ-WG-yYs"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-89" y="68"/>
+            <connections>
+                <outlet property="currentPriceLabel" destination="r39-Fi-X6g" id="lEc-3G-mzM"/>
+                <outlet property="noOfItemsTextField" destination="fJN-VY-vk6" id="BYm-iL-fVt"/>
+                <outlet property="offerDescription" destination="6Np-Hy-2iB" id="nzM-Hq-lB6"/>
+                <outlet property="previousPriceLabel" destination="ikw-r8-xWE" id="1Hg-bI-1FZ"/>
+                <outlet property="productImageView" destination="xeB-7o-1wM" id="80M-e8-J2J"/>
+                <outlet property="productNameLabel" destination="c4P-L7-Epm" id="4Do-wF-17w"/>
+                <outlet property="productQuantityLabel" destination="CcP-YH-NTK" id="dcK-gc-DQa"/>
+            </connections>
+            <point key="canvasLocation" x="-203" y="64"/>
         </tableViewCell>
     </objects>
 </document>

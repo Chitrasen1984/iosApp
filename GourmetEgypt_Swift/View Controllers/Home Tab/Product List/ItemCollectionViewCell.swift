@@ -15,6 +15,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var priceLabel: UILabel!
 	@IBOutlet weak var favouriteButton: UIButton!
 	@IBOutlet weak var addButton: UIButton!
+    static let cellIdentifier = "itemCell"
+    static let nibName = "ItemCollectionViewCell"
 
 	override func awakeFromNib() {
         super.awakeFromNib()

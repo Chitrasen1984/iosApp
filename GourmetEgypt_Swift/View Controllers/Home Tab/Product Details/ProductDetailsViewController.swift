@@ -51,7 +51,7 @@ extension ProductDetailsViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if indexPath.section == 0 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "ProductDetailCell", for: indexPath)
+			let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.cellIdentifier, for: indexPath)
 			return cell
 		} else {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCollectionTableViewCell", for: indexPath)
